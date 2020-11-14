@@ -309,7 +309,7 @@ namespace ImageChecker
 
         bool isRunningKeyboardRead = true;
 
-        private void ColorChecker_Load(object sender, EventArgs e)
+        private void ImageChecker_Load(object sender, EventArgs e)
         {
 
             Thread ThKeyboardRead = new Thread(KeyboardRead);
@@ -318,7 +318,7 @@ namespace ImageChecker
             ThKeyboardRead.Start();
         }
 
-        private void ColorChecker_FormClosed(object sender, FormClosedEventArgs e)
+        private void ImageChecker_FormClosed(object sender, FormClosedEventArgs e)
         {
             isRunningKeyboardRead = false;
         }

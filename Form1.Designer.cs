@@ -487,8 +487,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ImageChecker";
             this.Text = "Image Checker";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ColorChecker_FormClosed);
-            this.Load += new System.EventHandler(this.ColorChecker_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ImageChecker_FormClosed);
+            this.Load += new System.EventHandler(this.ImageChecker_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridActionList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picScreen1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picScreen2)).EndInit();

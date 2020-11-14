@@ -18,3 +18,13 @@ D:\0030 Programmieren\ImageChecker\ColorChecker\obj\Debug\ImageChecker.csproj.Co
 D:\0030 Programmieren\ImageChecker\ColorChecker\obj\Debug\ColorChecker.exe
 D:\0030 Programmieren\ImageChecker\ColorChecker\obj\Debug\ColorChecker.pdb
 D:\0030 Programmieren\ImageChecker\ColorChecker\obj\Debug\ImageChecker.ImageChecker.resources
+D:\0030 Programmieren\ImageChecker\ImageChecker\bin\Debug\ImageChecker.exe.config
+D:\0030 Programmieren\ImageChecker\ImageChecker\bin\Debug\ImageChecker.exe
+D:\0030 Programmieren\ImageChecker\ImageChecker\bin\Debug\ImageChecker.pdb
+D:\0030 Programmieren\ImageChecker\ImageChecker\obj\Debug\ImageChecker.csprojAssemblyReference.cache
+D:\0030 Programmieren\ImageChecker\ImageChecker\obj\Debug\ImageChecker.ImageChecker.resources
+D:\0030 Programmieren\ImageChecker\ImageChecker\obj\Debug\ImageChecker.Properties.Resources.resources
+D:\0030 Programmieren\ImageChecker\ImageChecker\obj\Debug\ImageChecker.csproj.GenerateResource.cache
+D:\0030 Programmieren\ImageChecker\ImageChecker\obj\Debug\ImageChecker.csproj.CoreCompileInputs.cache
+D:\0030 Programmieren\ImageChecker\ImageChecker\obj\Debug\ImageChecker.exe
+D:\0030 Programmieren\ImageChecker\ImageChecker\obj\Debug\ImageChecker.pdb

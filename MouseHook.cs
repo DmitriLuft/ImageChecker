@@ -10,7 +10,7 @@ using System.Threading;
 
 using System.Diagnostics;
 
-namespace ImageChecker
+namespace DAImageChecker
 {
     public static class MouseHook
     {

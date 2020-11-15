@@ -1,6 +1,6 @@
-﻿namespace ImageChecker
+﻿namespace DAImageChecker
 {
-    partial class ImageChecker
+    partial class DAImageChecker
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImageChecker));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DAImageChecker));
             this.btnStartRecord = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridActionList = new System.Windows.Forms.DataGridView();
@@ -70,6 +70,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.checkBoxAwait = new System.Windows.Forms.CheckBox();
+            this.timerAwaitStartExecution = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridActionList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picScreen1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picScreen2)).BeginInit();
@@ -451,11 +453,27 @@
             this.label6.TabIndex = 42;
             this.label6.Text = "ALT+C: disablr all prozess";
             // 
-            // ImageChecker
+            // checkBoxAwait
+            // 
+            this.checkBoxAwait.AutoSize = true;
+            this.checkBoxAwait.Location = new System.Drawing.Point(12, 159);
+            this.checkBoxAwait.Name = "checkBoxAwait";
+            this.checkBoxAwait.Size = new System.Drawing.Size(86, 17);
+            this.checkBoxAwait.TabIndex = 43;
+            this.checkBoxAwait.Text = "10 sec await";
+            this.checkBoxAwait.UseVisualStyleBackColor = true;
+            // 
+            // timerAwaitStartExecution
+            // 
+            this.timerAwaitStartExecution.Interval = 1000;
+            this.timerAwaitStartExecution.Tick += new System.EventHandler(this.timerAwaitStartExecution_Tick);
+            // 
+            // DAImageChecker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 665);
+            this.Controls.Add(this.checkBoxAwait);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button5);
@@ -485,10 +503,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStartRecord);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ImageChecker";
-            this.Text = "Image Checker";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ImageChecker_FormClosed);
-            this.Load += new System.EventHandler(this.ImageChecker_Load);
+            this.Name = "DAImageChecker";
+            this.Text = "DA Image Checker";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DAImageChecker_FormClosed);
+            this.Load += new System.EventHandler(this.DAImageChecker_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridActionList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picScreen1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picScreen2)).EndInit();
@@ -539,6 +557,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox checkBoxAwait;
+        private System.Windows.Forms.Timer timerAwaitStartExecution;
     }
 }
 

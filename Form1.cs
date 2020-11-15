@@ -18,12 +18,12 @@ using System.Drawing.Imaging;
 using System.IO;
 
 
-namespace ImageChecker
+namespace DAImageChecker
 {
 
-    public partial class ImageChecker : Form
+    public partial class DAImageChecker : Form
     {
-        public ImageChecker()
+        public DAImageChecker()
         {
             InitializeComponent();
 
@@ -309,7 +309,7 @@ namespace ImageChecker
 
         bool isRunningKeyboardRead = true;
 
-        private void ImageChecker_Load(object sender, EventArgs e)
+        private void DAImageChecker_Load(object sender, EventArgs e)
         {
 
             Thread ThKeyboardRead = new Thread(KeyboardRead);
@@ -318,7 +318,7 @@ namespace ImageChecker
             ThKeyboardRead.Start();
         }
 
-        private void ImageChecker_FormClosed(object sender, FormClosedEventArgs e)
+        private void DAImageChecker_FormClosed(object sender, FormClosedEventArgs e)
         {
             isRunningKeyboardRead = false;
         }
@@ -339,7 +339,15 @@ namespace ImageChecker
                 lblExStat.BackColor = Color.Green;
                 lblExStat.Text = "Play";
                 btnPlay.Text = "Stop Play";
-                timerActionExecute.Enabled = true;
+                if(checkBoxAwait.Checked == true)
+                {
+                    timerAwaitStartExecution.Enabled = true;
+                }
+                else
+                {
+                    timerActionExecute.Enabled = true;
+                }
+                
             }
             else
             {
@@ -582,7 +590,20 @@ namespace ImageChecker
             }
             label1.Text = Convert.ToString(dataGridActionList.CurrentCell.Value);
         }
-        
-
+        int awaitTime = 0;
+        private void timerAwaitStartExecution_Tick(object sender, EventArgs e)
+        {
+            if (awaitTime<=10)
+            {
+                awaitTime++;
+            }
+            else
+            {
+                timerActionExecute.Enabled = true;
+                awaitTime = 0;
+                timerAwaitStartExecution.Enabled = false;
+            }
+            
+        }
     }
 }

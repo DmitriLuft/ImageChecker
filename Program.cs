@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ImageChecker
+namespace DAImageChecker
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ImageChecker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImageChecker());
+            Application.Run(new DAImageChecker());
         }
     }
 }
